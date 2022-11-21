@@ -19,6 +19,8 @@
 # of your block.
 set ::env(MAGIC_ZEROIZE_ORIGIN) 0
 
+set ::env(FP_DEF_TEMPLATE) $::env(DESIGN_DIR)/fixed_dont_change/user_project_wrapper_gf180mcu.def
+
 # Area Configurations. DON'T TOUCH.
 set ::env(FP_SIZING) absolute
 set ::env(DIE_AREA) "0 0 2980.2 2980.2"
