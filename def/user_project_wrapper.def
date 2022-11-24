@@ -774,10 +774,131 @@ VIAS 3 ;
     - via4_5_3200_6200_4_2_1240_1240 + VIARULE Via4_GEN_HH + CUTSIZE 520 520  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 720 720  + ENCLOSURE 720 360 120 360  + ROWCOL 4 2  ;
     - via4_5_3200_3700_3_3_1040_1040 + VIARULE Via4_GEN_HH + CUTSIZE 520 520  + LAYERS Metal4 Via4 Metal5  + CUTSPACING 520 520  + ENCLOSURE 300 550 120 550  + ROWCOL 3 3  ;
 END VIAS
-COMPONENTS 1 ;
-    - mprj user_proj_example + FIXED ( 1175000 1690000 ) N ;
+COMPONENTS 6 ;
+    - merge_memory_inst merge_memory + FIXED ( 500000 2375000 ) N ;
+    - sky130_sram_2kbyte_1rw1r_32x512_8_inst0 sky130_sram_2kbyte_1rw1r_32x512_8 + FIXED ( 100000 1500000 ) N ;
+    - sky130_sram_2kbyte_1rw1r_32x512_8_inst1 sky130_sram_2kbyte_1rw1r_32x512_8 + FIXED ( 900000 1500000 ) N ;
+    - wb_memory_inst wb_memory + FIXED ( 500000 850000 ) N ;
+    - wb_mux_inst wb_mux + FIXED ( 1250000 200000 ) N ;
+    - wfg_top_inst wfg_top + FIXED ( 1900000 2200000 ) N ;
 END COMPONENTS
-PINS 418 ;
+PINS 645 ;
+    - analog_io[0] + NET analog_io[0] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 1426980 ) N ;
+    - analog_io[10] + NET analog_io[10] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 2230770 3521200 ) N ;
+    - analog_io[11] + NET analog_io[11] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 1906010 3521200 ) N ;
+    - analog_io[12] + NET analog_io[12] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 1581710 3521200 ) N ;
+    - analog_io[13] + NET analog_io[13] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 1257410 3521200 ) N ;
+    - analog_io[14] + NET analog_io[14] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 932650 3521200 ) N ;
+    - analog_io[15] + NET analog_io[15] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 608350 3521200 ) N ;
+    - analog_io[16] + NET analog_io[16] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 284050 3521200 ) N ;
+    - analog_io[17] + NET analog_io[17] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 3486700 ) N ;
+    - analog_io[18] + NET analog_io[18] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 3225580 ) N ;
+    - analog_io[19] + NET analog_io[19] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 2965140 ) N ;
+    - analog_io[1] + NET analog_io[1] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 1692860 ) N ;
+    - analog_io[20] + NET analog_io[20] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 2704020 ) N ;
+    - analog_io[21] + NET analog_io[21] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 2443580 ) N ;
+    - analog_io[22] + NET analog_io[22] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 2183140 ) N ;
+    - analog_io[23] + NET analog_io[23] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 1922020 ) N ;
+    - analog_io[24] + NET analog_io[24] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 1661580 ) N ;
+    - analog_io[25] + NET analog_io[25] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 1400460 ) N ;
+    - analog_io[26] + NET analog_io[26] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 1140020 ) N ;
+    - analog_io[27] + NET analog_io[27] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 879580 ) N ;
+    - analog_io[28] + NET analog_io[28] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 618460 ) N ;
+    - analog_io[2] + NET analog_io[2] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 1958740 ) N ;
+    - analog_io[3] + NET analog_io[3] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 2223940 ) N ;
+    - analog_io[4] + NET analog_io[4] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 2489820 ) N ;
+    - analog_io[5] + NET analog_io[5] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 2755700 ) N ;
+    - analog_io[6] + NET analog_io[6] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 3020900 ) N ;
+    - analog_io[7] + NET analog_io[7] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( 2921200 3286780 ) N ;
+    - analog_io[8] + NET analog_io[8] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 2879370 3521200 ) N ;
+    - analog_io[9] + NET analog_io[9] + DIRECTION INOUT + USE SIGNAL
+      + PORT
+        + LAYER met2 ( -280 -3600 ) ( 280 3600 )
+        + PLACED ( 2555070 3521200 ) N ;
     - io_in[0] + NET io_in[0] + DIRECTION INPUT + USE SIGNAL
       + PORT
         + LAYER Metal3 ( -7200 -1120 ) ( 7200 1120 )
@@ -1048,8 +1169,8 @@ PINS 418 ;
         + PLACED ( -2400 933520 ) N ;
     - io_oeb[36] + NET io_oeb[36] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
-        + LAYER Metal3 ( -7200 -1120 ) ( 7200 1120 )
-        + PLACED ( -2400 510160 ) N ;
+        + LAYER met3 ( -3600 -600 ) ( 3600 600 )
+        + PLACED ( -1200 227460 ) N ;
     - io_oeb[37] + NET io_oeb[37] + DIRECTION OUTPUT + USE SIGNAL
       + PORT
         + LAYER Metal3 ( -7200 -1120 ) ( 7200 1120 )
