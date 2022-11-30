@@ -34,14 +34,16 @@ set ::env(VERILOG_FILES) "\
 
 ## Clock configurations
 set ::env(CLOCK_PORT) "user_clock2"
-set ::env(CLOCK_NET) "mprj.clk"
 
-set ::env(CLOCK_PERIOD) "10"
+set ::env(CLOCK_PERIOD) "50"
 
 ## Internal Macros
 ### Macro PDN Connections
 set ::env(FP_PDN_MACRO_HOOKS) "\
-	mprj vdd vss vdd vss"
+	wfg_top_inst                            vdd vss vdd vss, \
+	merge_memory_inst                       vdd vss vdd vss, \
+	wb_mux_inst                             vdd vss vdd vss, \
+	wb_memory_inst                          vdd vss vdd vss"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
@@ -49,13 +51,29 @@ set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
 ### Black-box verilog and views
 set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$::env(DESIGN_DIR)/../../verilog/rtl/user_proj_example.v"
+	$::env(DESIGN_DIR)/../../verilog/gl/wfg_top.v \
+	$::env(DESIGN_DIR)/../../verilog/gl/merge_memory.v \
+	$::env(DESIGN_DIR)/../../verilog/gl/wb_mux.v \
+	$::env(DESIGN_DIR)/../../verilog/gl/wb_memory.v \
+	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
 
 set ::env(EXTRA_LEFS) "\
-	$::env(DESIGN_DIR)/../../lef/user_proj_example.lef"
+	$::env(DESIGN_DIR)/../../lef/wfg_top.lef \
+	$::env(DESIGN_DIR)/../../lef/merge_memory.lef \
+	$::env(DESIGN_DIR)/../../lef/wb_mux.lef \
+	$::env(DESIGN_DIR)/../../lef/wb_memory.lef \
+	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
-	$::env(DESIGN_DIR)/../../gds/user_proj_example.gds"
+	$::env(DESIGN_DIR)/../../gds/wfg_top.gds \
+	$::env(DESIGN_DIR)/../../gds/merge_memory.gds \
+	$::env(DESIGN_DIR)/../../gds/wb_mux.gds \
+	$::env(DESIGN_DIR)/../../gds/wb_memory.gds \
+	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds"
+
+
+set ::env(EXTRA_LIBS) "\
+    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 
