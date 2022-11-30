@@ -78,6 +78,10 @@ endif
 	@cp ./$*/runs/$*/PDK_SOURCES ../signoff/$*/
 	@cp ./$*/runs/$*/reports/*.csv ../signoff/$*/
 
+openlane-gui:
+	$(docker_run) \
+		$(OPENLANE_IMAGE_NAME)
+
 .PHONY: openlane
 openlane: check-openlane-env
 	if [ -d "$(OPENLANE_ROOT)" ]; then\

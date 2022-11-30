@@ -135,8 +135,8 @@ wire [23:0] unused;
 
 wfg_top wfg_top_inst (
 `ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
+	.vdd(vdd),	// User area 1 1.8V power
+	.vss(vss),	// User area 1 digital ground
 `endif
     
     .io_wbs_clk(wb_clk_i),
@@ -185,8 +185,8 @@ wire [31:0] dout0_mem1;
 
 wb_memory wb_memory_inst (
 `ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
+	.vdd(vdd),	// User area 1 1.8V power
+	.vss(vss),	// User area 1 digital ground
 `endif
     
     .io_wbs_clk(wb_clk_i),
@@ -230,8 +230,8 @@ wire [31:0] dout1_mem1;
 
 merge_memory merge_memory_inst (
 `ifdef USE_POWER_PINS
-	.vccd1(vccd1),	// User area 1 1.8V power
-	.vssd1(vssd1),	// User area 1 digital ground
+	.vdd(vdd),	// User area 1 1.8V power
+	.vss(vss),	// User area 1 digital ground
 `endif
 
     // Memory interface
@@ -250,6 +250,23 @@ merge_memory merge_memory_inst (
     .dout_mem1  (dout1_mem1)
 );
 
+/*
+gf180mcu_fd_ip_sram__sram512x8m8wm1 sram0(
+`ifdef USE_POWER_PINS
+	.VDD(vdd),	// User area 1 1.8V power
+	.VSS(vss),	// User area 1 digital ground
+`endif
+	.CLK(1'b0),
+	.CEN(1'b0),
+	.GWEN(1'b0),
+	.WEN(1'b0),
+	.A(9'b0),
+	.D(8'b0),
+	.Q()
+);*/
+
+
+/*
 sky130_sram_2kbyte_1rw1r_32x512_8 sky130_sram_2kbyte_1rw1r_32x512_8_inst0 (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
@@ -293,7 +310,7 @@ sky130_sram_2kbyte_1rw1r_32x512_8 sky130_sram_2kbyte_1rw1r_32x512_8_inst1 (
     .addr1  (addr1_mem1),
     .dout1  (dout1_mem1)
 );
-
+*/
 endmodule	// user_project_wrapper
 
 `default_nettype wire

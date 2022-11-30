@@ -15,8 +15,8 @@ module wfg_top #(
     parameter int BUSW = 32
 ) (
 `ifdef USE_POWER_PINS
-    inout vccd1,       // User area 1 1.8V supply
-    inout vssd1,       // User area 1 digital ground
+    inout vdd,	// User area 1 1.8V supply
+    inout vss,	// User area 1 digital ground
 `endif
     // Wishbone interface signals
     input               io_wbs_clk,

@@ -9,8 +9,8 @@ module wb_mux #(
     parameter MATCH_MASK_1 = 32'hFFFFF000
     )(
 `ifdef USE_POWER_PINS
-    inout vccd1,	// User area 1 1.8V supply
-    inout vssd1,	// User area 1 digital ground
+    inout vdd,	// User area 1 1.8V supply
+    inout vss,	// User area 1 digital ground
 `endif
 
     // WB Master
