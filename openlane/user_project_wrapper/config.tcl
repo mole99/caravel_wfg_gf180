@@ -43,7 +43,8 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	wfg_top_inst                            vdd vss vdd vss, \
 	merge_memory_inst                       vdd vss vdd vss, \
 	wb_mux_inst                             vdd vss vdd vss, \
-	wb_memory_inst                          vdd vss vdd vss"
+	wb_memory_inst                          vdd vss vdd vss, \
+	sram0                                   vdd vss VDD VSS"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg

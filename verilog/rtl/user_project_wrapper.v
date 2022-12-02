@@ -250,7 +250,7 @@ merge_memory merge_memory_inst (
     .dout_mem1  (dout1_mem1)
 );
 
-/*
+
 gf180mcu_fd_ip_sram__sram512x8m8wm1 sram0(
 `ifdef USE_POWER_PINS
 	.VDD(vdd),	// User area 1 1.8V power
@@ -263,7 +263,7 @@ gf180mcu_fd_ip_sram__sram512x8m8wm1 sram0(
 	.A(9'b0),
 	.D(8'b0),
 	.Q()
-);*/
+);
 
 
 /*
