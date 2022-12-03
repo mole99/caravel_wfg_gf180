@@ -1,9 +1,9 @@
 magic
 tech gf180mcuC
 magscale 1 5
-timestamp 1669805784
+timestamp 1670096642
 << obsm1 >>
-rect 672 1471 74392 18454
+rect 672 1538 74392 18454
 << metal2 >>
 rect 2576 0 2632 400
 rect 3416 0 3472 400
@@ -305,7 +305,7 @@ rect 2585 1094 74600 1426
 rect 2585 978 74570 1094
 rect 2585 646 74600 978
 rect 2585 530 74570 646
-rect 2585 350 74600 530
+rect 2585 406 74600 530
 << metal4 >>
 rect 9797 1538 9957 18454
 rect 19002 1538 19162 18454
@@ -316,7 +316,13 @@ rect 55822 1538 55982 18454
 rect 65027 1538 65187 18454
 rect 74232 1538 74392 18454
 << obsm4 >>
-rect 57078 345 58954 1783
+rect 15246 1689 18972 3015
+rect 19192 1689 28177 3015
+rect 28397 1689 37382 3015
+rect 37602 1689 46587 3015
+rect 46807 1689 55792 3015
+rect 56012 1689 64997 3015
+rect 65217 1689 65506 3015
 << labels >>
 rlabel metal3 s 74600 1008 75000 1064 6 addr[0]
 port 1 nsew signal input
@@ -592,8 +598,8 @@ port 129 nsew ground bidirectional
 string FIXED_BBOX 0 0 75000 20000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 829688
-string GDS_FILE /home/leo/Dokumente/workspace-gf-mpw-0/caravel_wfg_gf180mcu/openlane/merge_memory/runs/22_11_30_11_55/results/signoff/merge_memory.magic.gds
-string GDS_START 61726
+string GDS_END 825798
+string GDS_FILE /home/leo/Dokumente/workspace_gf_mpw0/caravel_wfg_gf180/openlane/merge_memory/runs/22_12_03_20_43/results/signoff/merge_memory.magic.gds
+string GDS_START 65398
 << end >>
 
