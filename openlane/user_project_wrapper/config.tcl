@@ -54,26 +54,23 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(DESIGN_DIR)/../../verilog/gl/wfg_top.v \
 	$::env(DESIGN_DIR)/../../verilog/gl/merge_memory.v \
 	$::env(DESIGN_DIR)/../../verilog/gl/wb_mux.v \
-	$::env(DESIGN_DIR)/../../verilog/gl/wb_memory.v \
-	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/verilog/gf180mcu_fd_ip_sram__sram512x8m8wm1.v"
+	$::env(DESIGN_DIR)/../../verilog/gl/wb_memory.v"
 
 set ::env(EXTRA_LEFS) "\
 	$::env(DESIGN_DIR)/../../lef/wfg_top.lef \
 	$::env(DESIGN_DIR)/../../lef/merge_memory.lef \
 	$::env(DESIGN_DIR)/../../lef/wb_mux.lef \
-	$::env(DESIGN_DIR)/../../lef/wb_memory.lef \
-	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/lef/gf180mcu_fd_ip_sram__sram512x8m8wm1.lef"
+	$::env(DESIGN_DIR)/../../lef/wb_memory.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
 	$::env(DESIGN_DIR)/../../gds/wfg_top.gds \
 	$::env(DESIGN_DIR)/../../gds/merge_memory.gds \
 	$::env(DESIGN_DIR)/../../gds/wb_mux.gds \
-	$::env(DESIGN_DIR)/../../gds/wb_memory.gds \
-	$::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/gds/gf180mcu_fd_ip_sram__sram512x8m8wm1.gds"
+	$::env(DESIGN_DIR)/../../gds/wb_memory.gds"
 
 
-set ::env(EXTRA_LIBS) "\
-    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib"
+#set ::env(EXTRA_LIBS) "\
+#    $::env(PDK_ROOT)/$::env(PDK)/libs.ref/gf180mcu_fd_ip_sram/liberty/gf180mcu_fd_ip_sram__sram512x8m8wm1__tt_025C_5v00.lib"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 
