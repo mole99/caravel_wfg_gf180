@@ -250,6 +250,28 @@ merge_memory merge_memory_inst (
     .dout_mem1  (dout1_mem1)
 );
 
+dffram_1rw1r_32_64 dffram_1rw1r_32_64_inst (
+`ifdef USE_POWER_PINS
+	.vdd(vdd),	// User area 1 1.8V power
+	.vss(vss),	// User area 1 digital ground
+`endif
+
+    // Port 0: RW
+    .clk0   (wb_clk_i),
+    .csb0   (csb0_mem0),
+    .web0   (web0_mem0),
+    .wmask0 (wmask0_mem0),
+    .addr0  (addr0_mem0[5:0]),
+    .din0   (din0_mem0),
+    .dout0  (dout0_mem0),
+
+    // Port 1: R
+    .clk1   (wb_clk_i),
+    .csb1   (csb1_mem0),
+    .addr1  (addr1_mem0[5:0]),
+    .dout1  (dout1_mem0)
+);
+
 endmodule	// user_project_wrapper
 
 `default_nettype wire

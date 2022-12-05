@@ -44,7 +44,8 @@ set ::env(FP_PDN_MACRO_HOOKS) "\
 	wfg_top_inst                            vdd vss vdd vss, \
 	merge_memory_inst                       vdd vss vdd vss, \
 	wb_mux_inst                             vdd vss vdd vss, \
-	wb_memory_inst                          vdd vss vdd vss"
+	wb_memory_inst                          vdd vss vdd vss, \
+	dffram_1rw1r_32_64_inst                 vdd vss vdd vss"
 
 ### Macro Placement
 set ::env(MACRO_PLACEMENT_CFG) $::env(DESIGN_DIR)/macro.cfg
@@ -55,19 +56,22 @@ set ::env(VERILOG_FILES_BLACKBOX) "\
 	$::env(DESIGN_DIR)/../../verilog/gl/wfg_top.v \
 	$::env(DESIGN_DIR)/../../verilog/gl/merge_memory.v \
 	$::env(DESIGN_DIR)/../../verilog/gl/wb_mux.v \
-	$::env(DESIGN_DIR)/../../verilog/gl/wb_memory.v"
+	$::env(DESIGN_DIR)/../../verilog/gl/wb_memory.v \
+	$::env(DESIGN_DIR)/../../verilog/gl/dffram_1rw1r_32_64.v"
 
 set ::env(EXTRA_LEFS) "\
 	$::env(DESIGN_DIR)/../../lef/wfg_top.lef \
 	$::env(DESIGN_DIR)/../../lef/merge_memory.lef \
 	$::env(DESIGN_DIR)/../../lef/wb_mux.lef \
-	$::env(DESIGN_DIR)/../../lef/wb_memory.lef"
+	$::env(DESIGN_DIR)/../../lef/wb_memory.lef \
+	$::env(DESIGN_DIR)/../../lef/dffram_1rw1r_32_64.lef"
 
 set ::env(EXTRA_GDS_FILES) "\
 	$::env(DESIGN_DIR)/../../gds/wfg_top.gds \
 	$::env(DESIGN_DIR)/../../gds/merge_memory.gds \
 	$::env(DESIGN_DIR)/../../gds/wb_mux.gds \
-	$::env(DESIGN_DIR)/../../gds/wb_memory.gds"
+	$::env(DESIGN_DIR)/../../gds/wb_memory.gds \
+	$::env(DESIGN_DIR)/../../gds/dffram_1rw1r_32_64.gds"
 
 set ::env(RT_MAX_LAYER) {Metal4}
 

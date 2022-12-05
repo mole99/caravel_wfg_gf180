@@ -20,7 +20,6 @@ set ::env(DESIGN_NAME) wfg_top
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
-	$::env(DESIGN_DIR)/../../verilog/rtl/wb_memory.sv \
 	$::env(DESIGN_DIR)/../../verilog/rtl/waveform-generator/design/wfg_core/rtl/wfg_core.sv \
 	$::env(DESIGN_DIR)/../../verilog/rtl/waveform-generator/design/wfg_core/rtl/wfg_core_top.sv \
 	$::env(DESIGN_DIR)/../../verilog/rtl/waveform-generator/design/wfg_core/rtl/wfg_core_wishbone_reg.sv \
