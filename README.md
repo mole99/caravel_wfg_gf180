@@ -6,7 +6,7 @@
 
 The source files for the Waveform Generator can be found under the [waveform-generator](https://github.com/semify-eda/waveform-generator) repository.
 
-![The completed GSD file](img/caravel_wfg.png)
+![The completed GSD file](img/wfg_gf180.png)
 
 The general idea is that various stimuli can be arbitrarily connected to different driver.
 
